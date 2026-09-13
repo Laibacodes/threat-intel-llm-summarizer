@@ -1,0 +1,13 @@
+# Secrets — never commit these
+.env
+
+# Logs and generated reports
+*.log
+report*.md
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+.DS_Store
