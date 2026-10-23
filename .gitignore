@@ -1,4 +1,4 @@
-# Secrets - do not commit these 
+# Secrets
 .env
 
 # Logs and generated reports
