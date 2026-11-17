@@ -79,3 +79,18 @@ Never commit real credentials — use `.env.example` as the shared template.
 - Async requests for batch IOC processing
 - HTML report output
 - Confidence scoring across >2 sources
+
+## Development Notes
+
+I built this tool with help from Claude (Anthropic), which I used to write
+and debug parts of the code. I designed the tool's functionality, chose the
+data sources, tested it on real indicators, and reviewed the code to make
+sure I understand how each part works.
+
+### Known limitations / next steps
+- Fields from VirusTotal and URLhaus (like tags and file names) are passed
+  into the LLM prompt which creates a prompt-injection risk. Next step:
+  treat source data as untrusted and check the LLM verdict against raw
+  detection counts.
+- SHA-1 hashes aren't supported for URLhaus payload lookups.
+- No retry/backoff for API rate limits.
